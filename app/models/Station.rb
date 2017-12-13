@@ -7,5 +7,6 @@ class Station
     @station_name   = data[:station_name]
     @state          = data[:state]
     @distance       = data[:distance]
+    #TODO -> more attributes.
   end
 end
