@@ -2,18 +2,15 @@ require 'rails_helper'
 
 RSpec.feature "User searches" do
   describe "by zip code 80203" do
-    it "and clicks locate and its routes to /search with visible params" do
-      visit "/"
-      within('.navbar') do
-        fill_in 'q', with: 80203
-        click_on "Locate"
-      end
-      expect(current_path).to eq(search_path)
+    before { visit '/'; within('.navbar') { fill_in 'q', with: 80203; click_on "Locate"} }
 
+    it "and clicks locate and its routes to /search with visible params" do
+      expect(current_path).to eq(search_path)
       expect(page).to have_current_path("/search?utf8=%E2%9C%93&q=80203&commit=Locate")
     end
 
     it "returns 10 closest stations within 6 miles and sorted by distance" do
+
     end
   end
 end
