@@ -18,7 +18,7 @@ class NrelService
   # https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?api_key=0Bw0RAsakXPN1kquKkdAIge2pzhgDbqLiaLtSzMF&location=80203&limit=10&distance=6&fuel_types=ELEC,LPG
 
   def closest_stations
-    get_json("/api/alt-fuel-stations/v1/nearest.json?api_key=#{ENV['NREL_API_KEY']}&location=#{zip_code}&limit=10&distance=6&fuel_types=ELEC,LPG")
+    get_json("/api/alt-fuel-stations/v1/nearest.json?api_key=#{ENV['NREL_API_KEY']}&location=#{zip_code}&limit=10&distance=6&fuel_types=ELEC,LPG")[:fuel_stations]
   end
 
   private
