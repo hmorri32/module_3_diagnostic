@@ -32,4 +32,3 @@ end
 ## Then I should see a list of the 10 closest stations within 6 miles sorted by distance
 ## And the stations should be limited to Electric and Propane
 ## And for each of the stations I should see Name, Address, Fuel Types, Distance, and Access Times
-# https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?api_key=0Bw0RAsakXPN1kquKkdAIge2pzhgDbqLiaLtSzMF&location=80203&limit=10&distance=6
