@@ -1,5 +1,10 @@
 <div class="container">
   <div class="stations">
-
+    COOL
+    <% @stations.each do |station| %>
+      <h2>Station Name: <%= station.station_name %></h2>
+      <p>Fuel Type: <%= station.fuel_type_code %></p>
+      <p>Distance: <%= station.distance %></p>
+    <% end %>
   </div>
 </div>
