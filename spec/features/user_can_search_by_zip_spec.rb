@@ -18,6 +18,7 @@ RSpec.feature "User searches" do
         expect(page).to have_content('Station Name')
         expect(page).to have_content('Fuel Type')
         expect(page).to have_content('Distance')
+        expect(page).to have_selector('.station', count: 10)
       end
     end
   end
