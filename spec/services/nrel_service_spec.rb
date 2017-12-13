@@ -9,8 +9,8 @@ RSpec.describe NrelService do
     end
   end
 
-  describe "class methods" do
-    describe "#closest_stations" do
+  describe "instance methods" do
+    describe ".closest_stations" do
       it "returns the ten closest stations" do
        VCR.use_cassette('nrel_service/closest_stations', :match_requests_on => [:method]) do
           stations = nrel.closest_stations
